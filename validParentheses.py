@@ -20,7 +20,7 @@ def validParentheses(arr):
 #       if it matches the closing brackets
         elif char in closing_brackets:
 #           check to see if the stack length is empty
-            if len(stack):
+            if len(stack) == 0:
 #               We will then return false as the brackets would be out of order
                 return False
 #           If the lasting char in the stack matches any og the matching brackets
