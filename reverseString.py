@@ -3,15 +3,12 @@
 
 #  time complexity O(n) space O(1)
 def reverseString(string):
-        leftIdx = 0
-        rightIdx = len(string) - 1
+#       leftIdx = starting indice  rightIdx = the last indice 
+        leftIdx, rightIdx = 0, len(string) - 1
+        
         while leftIdx < rightIdx:
-#       We add the string[rightIdx] to the variable temp 
-                temp = string[rightIdx]
-#       We then replace the string[startIdx] with the string[leftIdx]
-                string[rightIdx] = string[leftIdx]
-#       We then use the temp to replace the string[leftIdx]
-                string[leftIdx] = temp
+#       We swap the string[leftIdx] with string[rightIdx] and string[rightIdx] with string[leftIdx]
+                string[leftIdx], string[rightIdx] = string[rightIdx], string[leftIdx]
 #       Then increment each pointer, since the left pointer is going right we increment by one
                 leftIdx += 1
 #       The right pointer is heading to the left side of the array so we deincrement
@@ -28,3 +25,4 @@ print(reverseString(["h", "e", "l", "l", "o"]))
 
 #  IMPORTANT even though I could have done this with a single for loop, It still requires the use of two pointers; pointerOne = string[char] pointerTwo = string[len(char) - i - 1].
 #  This use of the while loop will cut down on the time which would be O(n/2) however due to convention this will still run in O(n)
+
