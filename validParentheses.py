@@ -23,7 +23,7 @@ def validParentheses(arr):
             if len(stack) == 0:
 #               We will then return false as the brackets would be out of order
                 return False
-#           If the lasting char in the stack matches any og the matching brackets
+#           If the last char in the stack matches any of the matching brackets
             if stack[-1] == matching_brackets:
                 stack.pop()
             else:
