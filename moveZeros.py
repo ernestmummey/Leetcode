@@ -13,14 +13,18 @@ Example 2:
 Input: nums = [0]
 Output: [0]
 """
-
+# time complexity O(n) space complexity O(1)
 def moveZeroes(arr):
     # slow_pointer will equal slow
     slow = 0
     for i in range(len(arr)):
+        #  If the array[i] does not equal zero
         if arr[i] != 0:
+            # Swap the arr[slow] with arr[i] and arr[i] with arr[slow]
             arr[slow], arr[i] = arr[i], arr[slow]
+            # increment the slow pointer
             slow += 1
+        # return the modified array
     return arr
 
 
